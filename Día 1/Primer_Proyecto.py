@@ -1,0 +1,1 @@
+print("Hola " + input("Comó te llamas ?: ") + " " + input("Cuál es tu apellido?: "))
