@@ -1,4 +1,3 @@
-frase="Si la implementación es difícil de explicar, puede que sea una mala idea."
-frase=frase.replace("difícil","fácil")
-frase=frase.replace("mala","buena")
-print(frase)
+mi_set_1 = {1, 2, "tres", "cuatro"}
+mi_set_2 = {"tres", 4, 5}
+mi_set3 = mi_set_1.union(mi_set_2)
