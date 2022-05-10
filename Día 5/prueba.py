@@ -1,22 +1,15 @@
-def suma_menores(suma):
-    sum=0
-    for n in suma:
-        if n in range(0, 100):
-            sum += n
-    return sum
+import random
 
 
-lista_numeros = [1, 2, 3, 4, 5,700,100,0,1]
-print(suma_menores(lista_numeros))
+def lanzar_dados():
+    return random.randint(1, 6), random.randint(1, 6)
 
 
-def cantidad_pares(pares):
-    cantidad = 0
-    for n in pares:
-        if n % 2 == 0:
-            cantidad += 1
-    return cantidad
-
-
-lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(cantidad_pares(lista_numeros))
+def evaluar_jugada(dado1, dado2):
+    suma_dados = dado1 + dado2
+    if suma_dados <= 6:
+        return f"La suma de tus dados es {suma_dados}. Lamentable"
+    elif suma_dados > 6 and suma_dados < 10:
+        return f"La suma de tus dados es {suma_dados}. Tienes buenas chances"
+    else:
+        return f"La suma de tus dados es {suma_dados}. Parece una jugada ganadora"
