@@ -1,13 +1,20 @@
-def mayuscula_saludo(texto):
-    print("Hola")
-    print(texto.upper())
-    print("Adios")
+def decorar_saludo(funcion):
 
-def mayuscula(texto):
-    print("Hola")
-    print(texto.upper())
-    print("Adios")
+    def otra_funcion(palabra):
+        print("Hola")
+        funcion(palabra)
+        print("Adios")
+    return otra_funcion
 
-def minuscula(texto):
+
+def mayusculas(texto):
+    print(texto.upper())
+
+
+
+def minusculas(texto):
     print(texto.lower())
 
+
+mayuscula_decorada = decorar_saludo(mayusculas)
+mayuscula_decorada("Diego")
